@@ -15,12 +15,8 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path, include
-from . import views
 
-# django scans this url list to find a matching string route
 urlpatterns = [
-    # include() connects app level and project level URL conf
-    path('first_app/', include('first_app.urls')),
     path('admin/', admin.site.urls),
-    path('', views.home_view, name='home'),
+    path('my_app/', include('my_app.urls')),
 ]
