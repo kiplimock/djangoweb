@@ -7,7 +7,7 @@
 </head>
 <body>
     <h1>Variable.html</h1>
-    <h2>{{ first_name }} {{ last_name }}</h2>
+    <h2>{{ first_name | lower | capfirst }} {{ last_name | lower | capfirst }}</h2>
     <h2>{{ my_list.0 }}</h2>
     <p>{# This is a comment #}</p>
 </body>
