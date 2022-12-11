@@ -7,12 +7,14 @@
 </head>
 <body>
     <h1>This is above the block in base.html</h1>
-
+    {% load static %}
     {% block content %}
     <h1>Home</h1>
     <p>This is within the block in base.html and won't be inherited</p>
     <p>Go to <a href="{% url 'my_app:example' %}">example</a></p>
     <p>Or <a href="{% url 'my_app:variable' %}">variable</a></p>
+
+    <img src="{% static 'my_app/flowchart.png' %}" alt="image" width=500px>
     {% endblock content %}
 
     <h1>This is below the block in base.html</h1>
