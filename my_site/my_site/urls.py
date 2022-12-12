@@ -21,6 +21,7 @@ urlpatterns = [
     path('', views.home, name='home'),
     path('admin/', admin.site.urls, name='admin'),
     path('my_app/', include('my_app.urls')),
+    path('office/', include('office.urls')),
 ]
 
 handler404 = 'my_site.views.page_not_found_view'
